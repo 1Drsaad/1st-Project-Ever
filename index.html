@@ -8,9 +8,9 @@
         var y = Number(document.getElementById("n1").value);
         document.getElementById("demo").value = x + y;
         document.getElementById("n1").value = "";
-        document.getElementById("btn2").onclick = function () {
-          document.getElementById("demo").textContent = "";
-        };
+      }
+      function reset() {
+        document.getElementById("demo").textContent = "";
       }
     </script>
   </head>
@@ -20,7 +20,7 @@
       <input value="0" id="demo" />
       <input id="n1" autocomplete="off" />
       <button id="btn" onclick="add()">Enter</button>
-      <button id="btn2" type="reset" >Clear</button>
+      <button id="btn2" onclick="reset()" >Clear</button>
     </div>
   </body>
   <style>
