@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      function add() {
+        var x = Number(document.getElementById("demo").value);
+        var y = Number(document.getElementById("n1").value);
+        document.getElementById("demo").value = x + y;
+        document.getElementById("n1").value = "";
+        document.getElementById("btn2").onclick = function () {
+          document.getElementById("demo").textContent = "";
+        };
+      }
+    </script>
+  </head>
+  <body>
+    <div class="box">
+      <h1>iCounter</h1>
+      <input value="0" id="demo" />
+      <input id="n1" autocomplete="off" />
+      <button id="btn" onclick="add()">Enter</button>
+      <button id="btn2">Clear</button>
+    </div>
+  </body>
+  <style>
+    body {
+      background: #2d3436;
+      font-family: verdana;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #demo {
+      border: 0;
+      background: none;
+      display: block;
+      text-align: center;
+      border: 2px solid;
+      width: 70px;
+      outline: none;
+      color: white;
+      transition: 0.25s;
+      pointer-events: none;
+    }
+    .box {
+      border: 2px solid #fff;
+      height: 300px;
+      width: 200px;
+      padding: 30px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #000;
+      text-align: center;
+      border-radius: 40px;
+    }
+    #demo {
+      border: none;
+      font-size: 40px;
+      font-family: verdana;
+      padding: 0;
+      margin: auto;
+    }
+    #n1 {
+      background: none;
+      border: 0;
+      padding: 0;
+      margin: 25px auto;
+      text-align: center;
+      font-family: verdana;
+      font-size: 15px;
+      border: 2px solid;
+      height: 40px;
+      width: 60px;
+      outline: none;
+      color: white;
+      border-radius: 24px;
+      transition: 0.3s;
+    }
+    #n1:focus {
+      width: 80px;
+      border-color: #fff;
+    }
+    #btn {
+      border: 0;
+      background: #fff;
+      display: block;
+      margin: auto;
+      text-align: center;
+      outline: none;
+      height: 50px;
+      width: 150px;
+      color: black;
+      font-size: 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    #btn2 {
+      border: 0;
+      background: #fff;
+      display: block;
+      margin: 10px auto;
+      text-align: center;
+      outline: none;
+      height: 30px;
+      width: 130px;
+      color: black;
+      font-size: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</html>
